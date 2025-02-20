@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello, Dockerized API!");
+// Define a route for /simple-api
+app.get("/simple-api", (req, res) => {
+  res.send("Hello, Dockerized API at /simple-api!");
 });
 
 const PORT = 9999;
