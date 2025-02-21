@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  simple-api:
+    container_name: simple-api-container
+    build: .
+    ports:
+      - "${PORT}:9999"  # Uses environment variable for flexibility
+    env_file:
+      - /etc/environment  # Loads environment variables from VPS
+    restart: always  # Ensures the container restarts if it crashes
